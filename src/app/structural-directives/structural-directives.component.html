@@ -1,0 +1,19 @@
+<hr>
+
+<!-- *ngIf (* = Sugar Syntax) -->
+<h3 *ngIf="condition">True</h3>
+<h3 *ngIf="!condition">False</h3>
+
+<!-- *ngFor -->
+<ul>
+    <li *ngFor="let fruit of fruits"  (click)="alertFruit(fruit)">{{fruit}}</li>
+</ul>
+<input type="text" [(ngModel)]="currentFruit">
+<button (click)="addFruit()">Add Fruit</button>
+
+<div [ngSwitch]="name">
+    <p *ngSwitchCase="'Guilherme'">Guilherme</p>
+    <p *ngSwitchCase="'Gabriel'">Gabriel</p>
+    <p *ngSwitchCase="'Lucas'">Lucas</p>
+    <p *ngSwitchDefault>Unkown</p>
+</div>

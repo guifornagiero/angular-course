@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { TitleComponent } from './title/title.component';
 import { DataBidingComponent } from './data-biding/data-biding.component';
 import { FormsModule } from '@angular/forms';
+import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TitleComponent,
-    DataBidingComponent
+    DataBidingComponent,
+    StructuralDirectivesComponent
   ],
   imports: [
     BrowserModule,
