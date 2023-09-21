@@ -6,13 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./title.component.scss'],
 })
 export class TitleComponent implements OnInit {
-  public title = 'Bem vindo...';
+  public title = 'Welcome...';
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit(): void {
     setTimeout(() => {
-      this.title = 'Bem vindo carregado...';
+      this.title = 'Welcome again...';
     }, 5000);
   }
 }
