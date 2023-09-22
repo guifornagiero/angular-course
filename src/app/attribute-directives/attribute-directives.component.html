@@ -1,0 +1,38 @@
+<!-- ng-content -->
+<ng-content select="h1"></ng-content>
+
+<hr>
+
+<h2>Attribute Directives</h2>
+<!-- ngClass -->
+<!-- It's an object, so the key/value are separated by commas -->
+<p [ngClass]="{'active': active, 'disabled': !active}">ngClass Test</p>
+
+<!-- ngStyle -->
+<!-- It's an object, so the key/value are separated by commas -->
+<p [ngStyle]="{'background': 'pink', 'color': 'white'}">ngStyle Test</p>
+
+<!-- ngModel -->
+<input type="text" [(ngModel)]="name">
+<p>{{name}}</p>
+
+<!-- ng-template -->
+<!-- Render the 'p', but removes if list is empty -->
+<p *ngFor="let item of list">{{item.name}}</p>
+
+<!-- Load the component (and execute verifications like ngFor, ngIf) before it loads the DOM -->
+<!-- If list is empty, doesn't even render the 'p' -->
+<ng-template ngFor let-item [ngForOf]="list">
+    <p>
+        {{item.name}}
+    </p>
+</ng-template>
+<br>
+
+<!-- Pipes -->
+<!-- Used to alter values of interpolations (uppercaso, dates, currency, etc)-->
+<p>{{date}}</p>
+<p>{{date | date: 'dd/MM/yyyy'}}</p>
+<p>{{(lastname | async) ? (lastname | async | uppercase) : 'Loading...'}}</p>
+
+<ng-content select="h5"></ng-content>
