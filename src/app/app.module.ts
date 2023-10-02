@@ -8,6 +8,7 @@ import { DataBidingComponent } from './data-biding/data-biding.component';
 import { FormsModule } from '@angular/forms';
 import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
 import { AttributeDirectivesComponent } from './attribute-directives/attribute-directives.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -20,9 +21,10 @@ import { AttributeDirectivesComponent } from './attribute-directives/attribute-d
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule //Added FormsModule to use ngModel as two way biding
+    FormsModule, //Added FormsModule to use ngModel as two way biding
+    SharedModule //Added all the export components from the sub-module "Shared"
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
